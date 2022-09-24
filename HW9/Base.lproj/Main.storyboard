@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--VK-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VK" customModule="HW9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="D6C0C60C-E36B-4728-93B6-DE8DBF7A151E_1_201_a" translatesAutoresizingMaskIntoConstraints="NO" id="efR-Cp-kIG">
+                                <rect key="frame" x="120" y="97" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="d5L-bk-V50"/>
+                                    <constraint firstAttribute="height" constant="150" id="yMg-eo-Ekr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажми на картинку чтобы изменить" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdy-S7-gaq">
+                                <rect key="frame" x="20" y="257" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeS-bp-DFm">
+                                <rect key="frame" x="139" y="318" width="112" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Войти в VK"/>
+                                <connections>
+                                    <action selector="VKLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YcV-V8-C96"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTh-TK-wI1">
+                                <rect key="frame" x="93.666666666666686" y="453" width="203" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Добавить публикацию"/>
+                                <connections>
+                                    <action selector="AddPostAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G5F-Sk-ZBm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qdy-S7-gaq" secondAttribute="trailing" constant="20" id="3zO-GW-5XK"/>
+                            <constraint firstItem="CeS-bp-DFm" firstAttribute="top" secondItem="Qdy-S7-gaq" secondAttribute="bottom" constant="40" id="5DN-eC-BcU"/>
+                            <constraint firstItem="Qdy-S7-gaq" firstAttribute="top" secondItem="efR-Cp-kIG" secondAttribute="bottom" constant="10" id="McJ-MV-GJ5"/>
+                            <constraint firstItem="BTh-TK-wI1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ou7-Pv-Oh8"/>
+                            <constraint firstItem="CeS-bp-DFm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QkA-q2-mw8"/>
+                            <constraint firstItem="Qdy-S7-gaq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WTh-wT-ycX"/>
+                            <constraint firstItem="BTh-TK-wI1" firstAttribute="top" secondItem="CeS-bp-DFm" secondAttribute="bottom" constant="100" id="Yyg-Q9-unJ"/>
+                            <constraint firstItem="efR-Cp-kIG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="byD-yP-d3P"/>
+                            <constraint firstItem="efR-Cp-kIG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hro-UK-X3S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AddPostButton" destination="BTh-TK-wI1" id="UUv-Kv-9P7"/>
+                        <outlet property="ImagePost" destination="efR-Cp-kIG" id="SFh-Sv-8hk"/>
+                        <outlet property="VKLoginButton" destination="CeS-bp-DFm" id="GX9-mM-zwg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="D6C0C60C-E36B-4728-93B6-DE8DBF7A151E_1_201_a" width="757" height="757"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
